@@ -58,7 +58,7 @@ class Twinkle():
                 
         data['USER']['user_name']=username
         data['USER']['user_domain']=domain
-        data['USER']['auth_name']=username
+        data['USER']['auth_name']=username # Twilio requires this field match your username, some clients want sip:username@domain
         data['USER']['auth_pass']=password
         
         n=0
