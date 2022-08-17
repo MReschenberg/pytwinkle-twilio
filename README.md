@@ -87,6 +87,7 @@ mTP.run()
    - register	Register your phone at a registrar
    - deregister	De-register your phone at a registrar
    - message		Send an instant message
+   - recieve DTMF  Recieve and react to DTMF
 
  - Not supported at the moment
    - redirect	Redirect an incoming call
