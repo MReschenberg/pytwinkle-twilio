@@ -56,7 +56,12 @@ def callback(event, *args):
     if event=="ended_call":
         line=args[0]
         print("call ended, line: %s"%(line))
-  
+    
+    if event == "dtmf_received":
+        line=args[0]
+        key = args[1]
+        print("dtmf received, line: %s key: %s"%(line, key))
+        
 mTP = Twinkle(callback)  
 mTP.set_account("name","domain","password")
 mTP.run()
