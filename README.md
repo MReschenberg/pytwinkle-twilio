@@ -7,14 +7,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 #### Description
-Twinkle sip client, ported to a python module.
+Twinkle sip client, ported to a python module. This version has been forked from the original to add DTMF support and to modify the exposed SIP Authorization Name to play nicely with Twilio. 
+Without this modification, you'll likely get this error in your Twilio console: `Error Code 32106,Authorization name and user ID does not match.`
 
 #### Tested environments
 
 |                         |                                         |
 |-------------------------|-----------------------------------------|
-| **Hardware**            | Rpi zero W                              | 
-| **Operating systems**   | Linux                                   |
+| **Hardware**            | Rpi 3 B                                 | 
+| **Operating systems**   | RaspiOS                                 |
 | **Python versions**     | Python 3.x                              |
 | **Distros**             | Raspbian 10                             |
 | **Languages**           | English                                 |
@@ -77,6 +78,7 @@ mTP.run()
 | "cancelled_call"         | Cancelled call               | Line number                            |
 | "answered_call"          | Answered call                | call={'msg':msg, 'code':num, 'to':uri} |
 | "ended_call"             | Ended call                   | Line number                            |
+| "dtmf_recieved"          | Client recieved DTMF         | DTMF key                               |
 
 (*) doesnt matter the seconds to expire, the program keep the session active
 
