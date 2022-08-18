@@ -25,6 +25,12 @@ Without this modification, you'll likely get this error in your Twilio console: 
 sudo apt-get install twinkle
 sudo pip3 install pytwinkle
 ```
+To install from this source, please run
+```Shell
+git clone https://github.com/MReschenberg/pytwinkle-twilio
+cd pytwinkle-twilio
+pip install .
+```
 
 #### Example
 ```Python
